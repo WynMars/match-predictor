@@ -21,13 +21,13 @@ describe('Http', () => {
         expect(res).toEqual(result.ok({success: true}));
     });
 
-    // test('connection error', async () => {
-    //     server.close();
+    test('connection error', async () => {
+        server.close();
 
-    //     const res = await http.sendRequest('error', decoder);
+        const res = await http.sendRequest('error', decoder);
 
-    //     expect(res).toEqual(result.err({name: 'connection error'}));
-    // });
+        expect(res).toEqual(result.err({name: 'connection error'}));
+    });
 
     test('500 error', async () => {
         server.use(rest.get('/error', (req, res, ctx) => res(ctx.status(500), ctx.text('Something went wrong'))));
