@@ -34,8 +34,8 @@ def build_model_provider(training_data: List[Result]) -> ModelProvider:
         # The linear regression model uses scikit learn, so can cause issues on some machines
         # Model("Linear regression", train_regression_predictor(training_data))
         Model("Alphabet", AlphabetPredictor()),
-        Model("Gradient Boosting", train_gradient_boosting_predictor(training_data))
-
+        #Gradient boosting "make backend/run" won't run properly if this model is applied, but "make backend/report" do work
+        Model("Gradient Boosting", train_gradient_boosting_predictor(training_data)),
     ])
 
 

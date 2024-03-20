@@ -1,7 +1,6 @@
 from matchpredictor.matchresults.result import Fixture, Outcome
 from matchpredictor.predictors.predictor import Prediction, Predictor
 
-
 class AlphabetPredictor(Predictor):
     def predict(self, fixture: Fixture) -> Prediction:
         home_name = fixture.home_team.name
