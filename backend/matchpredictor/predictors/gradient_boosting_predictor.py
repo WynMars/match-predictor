@@ -3,8 +3,8 @@ from typing import List, Tuple, Optional
 import numpy as np
 from numpy import float64
 from numpy.typing import NDArray
-from sklearn.ensemble import GradientBoostingClassifier
-from sklearn.preprocessing import OneHotEncoder
+from sklearn.ensemble import GradientBoostingClassifier # type: ignore
+from sklearn.preprocessing import OneHotEncoder # type: ignore
 
 from matchpredictor.matchresults.result import Fixture, Outcome, Result, Team
 from matchpredictor.predictors.predictor import Predictor, Prediction
